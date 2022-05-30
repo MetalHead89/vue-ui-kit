@@ -18,5 +18,6 @@ export default defineComponent({
 <style lang="scss">
 .mh-navbar__item {
   list-style-type: none;
+  cursor: pointer;
 }
 </style>
