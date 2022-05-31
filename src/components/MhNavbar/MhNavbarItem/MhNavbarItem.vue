@@ -17,7 +17,14 @@ export default defineComponent({
 
 <style lang="scss">
 .mh-navbar__item {
+  color: #414141;
+  font-size: 1vw;
+  font-weight: 800;
   list-style-type: none;
   cursor: pointer;
+
+  &:hover {
+    color: #797979;
+  }
 }
 </style>
