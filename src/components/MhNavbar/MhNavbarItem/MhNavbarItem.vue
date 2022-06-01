@@ -16,15 +16,20 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+$color: #414141;
+$hovered-color: #797979;
+$size: 1vw;
+$weight: 800;
+
 .mh-navbar__item {
-  color: #414141;
-  font-size: 1vw;
-  font-weight: 800;
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
   list-style-type: none;
   cursor: pointer;
 
   &:hover {
-    color: #797979;
+    color: $hovered-color;
   }
 }
 </style>
