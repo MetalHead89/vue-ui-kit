@@ -1,10 +1,12 @@
 <template>
-  <MhNavbar v-bind:items="items" />
+  <mh-navbar v-bind:items="items" />
+  <mh-header v-bind:items="items" />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import MhNavbar from "@/components/MhNavbar/MhNavbar.vue";
+import MhHeader from "@/components/MhHeader/MhHeader.vue";
 
 export default defineComponent({
   name: "App",
@@ -23,6 +25,7 @@ export default defineComponent({
 
   components: {
     MhNavbar,
+    MhHeader,
   },
 });
 </script>
