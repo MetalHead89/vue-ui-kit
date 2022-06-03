@@ -1,5 +1,10 @@
 # vue-components
 
+## Для сборки были использованы:
+
+node: 16.14.2  
+npm: 8.6.0
+
 ## Project setup
 ```
 npm install
