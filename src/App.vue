@@ -1,6 +1,12 @@
 <template>
-  <mh-navbar v-bind:items="items" />
-  <mh-header v-bind:items="items" />
+  <section class="app__component-section">
+    <h2 class="app__component-title">Navbar</h2>
+    <mh-navbar v-bind:items="items" />
+  </section>
+  <section class="app__component-section">
+    <h2 class="app__component-title">Header</h2>
+    <mh-header v-bind:items="items" />
+  </section>
 </template>
 
 <script lang="ts">
@@ -31,12 +37,20 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-#app {
+.app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+
+  &__component-section {
+    padding: 1vw 0;
+  }
+
+  &__component-title {
+    size: 3vw;
+    text-align: left;
+  }
 }
 </style>
