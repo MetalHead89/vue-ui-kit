@@ -1,10 +1,14 @@
 <template>
-  <section class="app__component-section">
-    <h2 class="app__component-title">Navbar</h2>
-    <mh-navbar v-bind:items="items" />
-  </section>
-  <section class="app__component-section">
-    <h2 class="app__component-title">Header</h2>
+  <div class="app__simple-components">
+    <section class="app__component">
+      <h2 class="app__component-title">Navbar</h2>
+      <mh-navbar v-bind:items="items" />
+    </section>
+  </div>
+  <section class="app__component">
+    <div class="app__title-container">
+      <h2 class="app__component-title">Header</h2>
+    </div>
     <mh-header v-bind:items="items" />
   </section>
 </template>
@@ -44,8 +48,16 @@ export default defineComponent({
   text-align: center;
   color: #2c3e50;
 
-  &__component-section {
+  &__simple-components {
+    padding: 0 1vw;
+  }
+
+  &__component {
     padding: 1vw 0;
+  }
+
+  &__title-container {
+    padding: 0 1vw;
   }
 
   &__component-title {
