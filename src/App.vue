@@ -1,68 +1,47 @@
-<template>
-  <div class="app__simple-components">
-    <section class="app__component">
-      <h2 class="app__component-title">Navbar</h2>
-      <mh-navbar v-bind:items="items" />
-    </section>
-  </div>
-  <section class="app__component">
-    <div class="app__title-container">
-      <h2 class="app__component-title">Header</h2>
-    </div>
-    <mh-header v-bind:items="items" />
-  </section>
-</template>
-
-<script lang="ts">
-import { defineComponent } from "vue";
-import MhNavbar from "@/components/MhNavbar/MhNavbar.vue";
-import MhHeader from "@/components/MhHeader/MhHeader.vue";
-
-export default defineComponent({
-  name: "App",
-
-  data() {
-    return {
-      items: [
-        { id: 1, text: "item 1" },
-        { id: 2, text: "item 2" },
-        { id: 3, text: "item 3" },
-        { id: 4, text: "item 4" },
-        { id: 5, text: "item 5" },
-      ],
-    };
-  },
-
-  components: {
-    MhNavbar,
-    MhHeader,
-  },
-});
+<script setup lang="ts">
+import HelloWorld from './components/HelloWorld.vue'
+import TheWelcome from './components/TheWelcome.vue'
 </script>
 
-<style lang="scss">
-.app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<template>
+  <header>
+    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
-  &__simple-components {
-    padding: 0 1vw;
+    <div class="wrapper">
+      <HelloWorld msg="You did it!" />
+    </div>
+  </header>
+
+  <main>
+    <TheWelcome />
+  </main>
+</template>
+
+<style scoped>
+header {
+  line-height: 1.5;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 2rem;
+}
+
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    place-items: center;
+    padding-right: calc(var(--section-gap) / 2);
   }
 
-  &__component {
-    padding: 1vw 0;
+  .logo {
+    margin: 0 2rem 0 0;
   }
 
-  &__title-container {
-    padding: 0 1vw;
-  }
-
-  &__component-title {
-    size: 3vw;
-    text-align: left;
+  header .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
   }
 }
 </style>
